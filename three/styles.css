@@ -1,0 +1,11 @@
+html, body{
+    min-width: 100vw;
+    min-height: 100vh;
+}
+#pointer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 25px;
+    width: 25px;
+}

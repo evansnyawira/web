@@ -1,0 +1,32 @@
+@keyframes animateOpen {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@keyframes flash {
+    from { text-shadow: 0 0 32px white; }
+    to { text-shadow: 0 0 0 white; }
+ }
+
+body{
+    background: #000000;
+    color: #fff;
+}
+
+.opening span{
+    position: relative;
+    opacity: 0;
+    animation:  animateOpen 5s ease-in-out infinite, flash 1s ease-in-out;
+    margin-right: 1em;
+}
+.opening span:nth-child(4n) {
+     animation-delay:3s;
+ }
+.opening span:nth-child(4n-1) {
+         animation-delay: 2s; 
+        }
+.opening span:nth-child(4n-2) { 
+    animation-delay: 1s; 
+}
+.opening span:nth-child(4n-3) {
+     animation-delay: 0s;
+}

@@ -1,0 +1,81 @@
+.tiled{
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    width:20em;
+    height: 20em;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.tiled > *:first-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    margin-top: 1em;
+}
+
+.tiled > *:first-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    margin: 0;
+}
+
+.tiled> *:last-child> span{
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 20%;
+    height: 20%;
+    overflow: hidden;
+}
+.tiled > *:last-child > span > span{
+    position: absolute;
+    background: url(image.jpg) #c00 100% top no-repeat;
+    background-size: 600% 600%;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    left: 100%;
+    top: 100%;
+    transition: all .25s;
+    transition-timing-function: ease-in;  
+}
+.tiled:target> *:last-child>span>span{
+    left: 0;
+    top: 0;
+}
+.tiled:target>*:last-child> span:nth-child(5n+2) > span{
+    background-position-x: 0;
+}
+.tiled:target>*:last-child> span:nth-child(5n+2) > span{
+    background-position-x: 20%;
+}
+.tiled:target>*:last-child> span:nth-child(5n+3) > span{
+    background-position-x: 40%;
+}
+.tiled:target>*:last-child> span:nth-child(5n+4) > span{
+    background-position-x: 60%;
+}
+.tiled:target>*:last-child> span:nth-child(5n+5) > span{
+    background-position-x: 80%;
+}
+
+.tiled:target > *:last-child > span:nth-child(n):nth-child(-n+5) > span{
+	background-position-y: 0%;
+}
+.tiled:target > *:last-child > span:nth-child(n+6):nth-child(-n+10) > span{
+	background-position-y: 20%;
+}
+.tiled:target > *:last-child > span:nth-child(n+11):nth-child(-n+15) > span{
+	background-position-y: 40%;
+}
+.tiled:target > *:last-child > span:nth-child(n+16):nth-child(-n+20) > span{
+	background-position-y: 60%;
+}
+.tiled:target > *:last-child > span:nth-child(n+21):nth-child(-n+25) > span{
+	background-position-y: 80%;
+}
